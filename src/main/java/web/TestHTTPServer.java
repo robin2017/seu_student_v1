@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import dao.StudentDao;
 import dao.StudentDaoImpl;
 import domain.Student;
+import service.StudentService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+
 
 /**
  * Created by robin on 2016/10/20.
@@ -29,9 +30,9 @@ public class TestHTTPServer extends HttpServlet {
         out.println("number=" + number);
 
 
-        StudentDao dao= new StudentDaoImpl();
+        StudentService service= new StudentService();
 
-        Student stu= dao.getStudentByNumber(number);
+        Student stu= service.getStudentByNumber(number);
         String text= JSON.toJSONString(stu);
         out.println("student="+text);
 
