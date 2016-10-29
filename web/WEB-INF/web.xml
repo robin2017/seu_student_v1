@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>TestHTTPServer</servlet-name>
-        <servlet-class>web.TestHTTPServer</servlet-class>
+        <servlet-class>web.StudentInfoServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>TestHTTPServer</servlet-name>
