@@ -11,11 +11,18 @@ import java.sql.Statement;
 public class DataBaseUtil {
 
     public static String driver="com.mysql.jdbc.Driver";
-    public static String host="localhost";
-    public static String username="root";
-    public static String password="123456";
+    public static String host="robinid.ci4fwjnjiubu.ap-southeast-1.rds.amazonaws.com";
+    public static String username="robin";
+    public static String password="121518asd";
     public static String port="3306";
     public static String database="seu";
+
+//    public static String driver="com.mysql.jdbc.Driver";
+//    public static String host="localhost";
+//    public static String username="root";
+//    public static String password="123456";
+//    public static String port="3306";
+//    public static String database="seu";
 
 
     public static String url=null;
