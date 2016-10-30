@@ -18,11 +18,17 @@ import static util.PropertyUtil.*;
  * Created by robin on 2016/10/20.
  */
 public class StudentInfoServlet extends HttpServlet {
+	public static String database_ip=null;
+	public static String database_user=null;
+	public static String database_password=null;
     private static final long serialVersionUID = 1L;
     @Override
     protected void doGet(HttpServletRequest request, 
     		HttpServletResponse response)throws ServletException, IOException {
-        String number = request.getParameter("number");
+    	database_ip=getServletConfig().getInitParameter("database_ip");//这个只能在控制层servlet中调用，不能在持久层
+        database_user=getServletConfig().getInitParameter("database_user");
+        database_password=getServletConfig().getInitParameter("database_password");
+    	String number = request.getParameter("number");
         StudentService service= new StudentService();
         Student stu= service.getStudentByNumber(number);
         List list=PropertyUtil.getRobinFiledsInfo(stu);

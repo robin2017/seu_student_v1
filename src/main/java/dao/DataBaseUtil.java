@@ -5,25 +5,19 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import web.StudentInfoServlet;
+
 /**
  * Created by robin on 2016/10/23.
  */
 public class DataBaseUtil {
 
     public static String driver="com.mysql.jdbc.Driver";
-    public static String host="robinid.ci4fwjnjiubu.ap-southeast-1.rds.amazonaws.com";
-    public static String username="robin";
-    public static String password="121518asd";
+    public static String host=null;
+    public static String username=null;
+    public static String password=null;
     public static String port="3306";
     public static String database="seu";
-
-//    public static String driver="com.mysql.jdbc.Driver";
-//    public static String host="localhost";
-//    public static String username="root";
-//    public static String password="123456";
-//    public static String port="3306";
-//    public static String database="seu";
-
 
     public static String url=null;
     public static Connection con=null;
@@ -38,6 +32,9 @@ public class DataBaseUtil {
         }
     }
     public static void s2ProviderURL(){
+    	host=StudentInfoServlet.database_ip;
+    	username=StudentInfoServlet.database_user;
+    	password=StudentInfoServlet.database_password;
         url = "jdbc:mysql://"+host+":"+port+"/"+database;
     }
     public static void s3CreateConnection()  {

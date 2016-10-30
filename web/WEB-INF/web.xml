@@ -8,6 +8,27 @@
     <servlet>
         <servlet-name>TestHTTPServer</servlet-name>
         <servlet-class>web.StudentInfoServlet</servlet-class>
+        
+        
+        <!-- 
+        robinid.ci4fwjnjiubu.ap-southeast-1.rds.amazonaws.com   robin  121518asd
+        localhost  root  123456
+        此处暴露了隐私信息给外界，如果在github上
+        如何解决？
+        
+         -->
+        <init-param>
+        	<param-name>database_ip</param-name>
+        	<param-value>223.3.230.110</param-value>
+        </init-param>
+        <init-param>
+        	<param-name>database_user</param-name>
+        	<param-value>root</param-value>
+        </init-param>
+        <init-param>
+        	<param-name>database_password</param-name>
+        	<param-value>123456</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>TestHTTPServer</servlet-name>
