@@ -19,7 +19,7 @@
          -->
         <init-param>
         	<param-name>database_ip</param-name>
-        	<param-value>223.3.230.110</param-value>
+        	<param-value>localhost</param-value>
         </init-param>
         <init-param>
         	<param-name>database_user</param-name>

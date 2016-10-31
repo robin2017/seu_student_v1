@@ -34,8 +34,8 @@ public class StudentInfoServlet extends HttpServlet {
         List list=PropertyUtil.getRobinFiledsInfo(stu);
        
         request.setAttribute("styles", list);
-		 RequestDispatcher view=request.getRequestDispatcher("result.jsp");
-		 view.forward(request, response);
+		RequestDispatcher view=request.getRequestDispatcher("result.jsp");
+		view.forward(request, response);
       
 
     }
