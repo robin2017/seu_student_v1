@@ -35,4 +35,18 @@ public class LoginerDaoImpl implements LoginerDao {
         return loginer.getPassword().equals(password);
 
     }
+
+	@Override
+	public boolean register(String name, String password) {
+		// TODO Auto-generated method stub
+		 String sql="insert into logininfo values('"+name+"','"+password+"')";
+	        DataBaseUtil.preOperation();
+	        try {
+				int rs=DataBaseUtil.stmt.executeUpdate(sql);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		return true;
+	}
 }

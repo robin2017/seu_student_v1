@@ -13,9 +13,9 @@ import web.StudentInfoServlet;
 public class DataBaseUtil {
 
     public static String driver="com.mysql.jdbc.Driver";
-    public static String host=null;
-    public static String username=null;
-    public static String password=null;
+    public static String host="localhost";
+    public static String username="root";
+    public static String password="123456";
     public static String port="3306";
     public static String database="seu";
 
@@ -32,13 +32,14 @@ public class DataBaseUtil {
         }
     }
     public static void s2ProviderURL(){
-    	host=StudentInfoServlet.database_ip;
-    	username=StudentInfoServlet.database_user;
-    	password=StudentInfoServlet.database_password;
+//    	host=StudentInfoServlet.database_ip;
+//    	username=StudentInfoServlet.database_user;
+//    	password=StudentInfoServlet.database_password;
         url = "jdbc:mysql://"+host+":"+port+"/"+database;
     }
     public static void s3CreateConnection()  {
         try {
+        	System.out.println(url+"-----"+username+"-----"+password);
             con = DriverManager.getConnection(url, username, password) ;
         } catch (SQLException e) {
             System.out.println("数据库连接失败！");

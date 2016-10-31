@@ -5,4 +5,5 @@ package dao;
  */
 public interface LoginerDao {
     public  boolean isValid(String name,String password);
+    public  boolean register(String name,String password);
 }

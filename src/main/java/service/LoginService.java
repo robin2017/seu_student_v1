@@ -11,6 +11,9 @@ public class LoginService {
     public static boolean isValid(String user,String password){
         return new LoginerDaoImpl().isValid(user,password);
     }
+    public static boolean register(String user,String password){
+    	return new LoginerDaoImpl().register(user,password);
+    }
     public static void main(String[] args){
         System.out.println(isValid("robin","121518"));
     }
