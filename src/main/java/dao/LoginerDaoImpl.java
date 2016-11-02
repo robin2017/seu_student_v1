@@ -36,7 +36,7 @@ public class LoginerDaoImpl implements LoginerDao {
 
     }
 
-	@Override
+	
 	public boolean register(String name, String password) {
 		// TODO Auto-generated method stub
 		 String sql="insert into logininfo values('"+name+"','"+password+"')";
